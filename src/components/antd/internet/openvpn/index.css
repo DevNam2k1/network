@@ -1,0 +1,17 @@
+/* :where(.css-dev-only-do-not-override-26rdvq).ant-col-16 {
+    display: flex;
+    flex: 0 0 100%;
+    max-width: 100%;
+} */
+
+/* :where(.css-dev-only-do-not-override-26rdvq).ant-form-item .ant-form-item-label >label::after {
+    content: ":";
+    position: relative;
+    margin-block: 0;
+    margin-inline-start: 10px;
+    margin-inline-end: 75px;
+} */
+
+/* .UploadCertificate{
+    margin-inline-end: 1000px;
+} */

@@ -1,0 +1,15 @@
+.transbox{
+    font-size:50px;
+    text-align:center;
+    padding:20px;
+    background-color:#f00;
+  }
+
+  .profile-nav-bg {
+    height: 700px;
+    margin-top: -137.8px;
+    border-radius: 12px;
+    box-shadow: 0 20px 27px rgb(0 0 0 / 5%);
+    background-size: cover;
+    background-position: 50%;
+  }
