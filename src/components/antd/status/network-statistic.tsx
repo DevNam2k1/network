@@ -25,11 +25,11 @@ export const ClientsConnected = (props:any) => {
         key: 'mac',
         render: (text) => <a>{text}</a>,
     },
-    {
-        title: t('frequency'),
-        dataIndex: 'freq',
-        key: 'freq',
-    },
+    // {
+    //     title: t('frequency'),
+    //     dataIndex: 'freq',
+    //     key: 'freq',
+    // },
     {
         title: t('tx_bytes'),
         dataIndex: 'tx',
@@ -164,7 +164,7 @@ export const NetworkStatistic = (props:any) => {
         xField: 'time',
         yField: 'value',
         seriesField: 'category',
-        color: ['#FF0000', '#FF0000', '#FF0000'],
+        color: ['#0000FF', '#FF0000', '#FF0000'],
         };
 
     return <Line {...config} />;
