@@ -14,6 +14,7 @@ export const TRANSLATIONS_EN = {
     lan_statistic: "LAN Statistic",
     wifi_statistic: "Wireless Statistic",
     mac_address: "MAC Address",
+    total: "Total bytes",
     dashboard: "Dashboard",
     system: "System",
     security: "Security",

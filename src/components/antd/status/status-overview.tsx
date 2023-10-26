@@ -21,12 +21,12 @@ export const StatusOverview = () => {
       <br></br>
       <Row gutter={[24, 0]} >
         <Col span={12}>
-          <Card title={t("memory_usage")} size="small" style={{ textAlign: "center" }} headStyle={{background:"linear-gradient(109.6deg, rgb(44, 83, 131), rgb(44, 83, 131) 18.9%, rgb(68, 124, 143), rgb(44, 83, 131) 91.1%, rgb(44, 83, 131))",color: 'white'}}>
+          <Card title={t("memory_usage")} size="small" style={{ textAlign: "center" }} headStyle={{background:"linear-gradient(45deg, #07117e, #07117e",color: 'white'}}>
             <SystemMemoryInfoTable systemInfo={systemInfo} />
           </Card>
         </Col>
         <Col span={12}>
-          <Card title={t("internet_connection")} size="small" style={{ textAlign: 'center' }} headStyle={{background:"linear-gradient(109.6deg, rgb(44, 83, 131), rgb(44, 83, 131) 18.9%, rgb(68, 124, 143), rgb(44, 83, 131) 91.1%, rgb(44, 83, 131))",color: 'white'}}>
+          <Card title={t("internet_connection")} size="small" style={{ textAlign: 'center' }} headStyle={{background:"linear-gradient(45deg, #07117e, #07117e",color: 'white'}}>
             <InternetStatus systemInfo={systemInfo} />
           </Card>
         </Col>

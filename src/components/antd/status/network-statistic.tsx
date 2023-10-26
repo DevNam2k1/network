@@ -13,6 +13,7 @@ export const ClientsConnected = (props:any) => {
     interface DataType {
     mac: string;
     freq: string;
+    total: number;
     tx: number;
     rx: number;
     signal: number;
@@ -41,6 +42,11 @@ export const ClientsConnected = (props:any) => {
         key: 'rx',
     },
     {
+        title: t('total'),
+        dataIndex: 'total',
+        key: 'total',
+    },
+    {
         title: t('signal'),
         dataIndex: 'signal',
         key: 'signal',
@@ -51,7 +57,7 @@ export const ClientsConnected = (props:any) => {
 
     const { systemInfo } = useSelector(sessionSelector)
     const { wlan0_clients = {}, wlan1_clients = {} } = systemInfo?.data || {}  
-    const  clients_24 = wlan0_clients.clients  
+    let  clients_24 = wlan0_clients.clients 
     const  clients_5 = wlan1_clients.clients 
     const freq24 = wlan0_clients.freq
     const freq5 = wlan1_clients.freq
@@ -64,6 +70,7 @@ export const ClientsConnected = (props:any) => {
         data.push({
                 mac: client,
                 freq: freq24,
+                total: clients_24[client].bytes?.tx + clients_24[client].bytes?.rx || 0,
                 tx: clients_24[client].bytes?.tx || 0,
                 rx: clients_24[client].bytes?.rx || 0, 
                 signal: clients_24[client]?.signal || 0
@@ -77,6 +84,7 @@ export const ClientsConnected = (props:any) => {
         data.push({
                 mac: client,
                 freq: freq5,
+                total: clients_5[client].bytes?.tx + clients_5[client].bytes?.rx || 0,
                 tx: clients_5[client].bytes?.tx || 0,
                 rx: clients_5[client].bytes?.rx || 0,
                 signal: clients_5[client]?.signal || 0

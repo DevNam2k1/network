@@ -57,7 +57,7 @@ const AntdLayout = (props: any) => {
               color: '#006af0',
               // textTransform: 'uppercase',
               // textShadow: "1px 1px 0px #8268886e,1px 2px 0px #8268886e,1px 3px 0px #957dad,1px 4px 0px #957dad,1px 5px 0px #957dad,1px 6px 0px #826888,1px 10px 5px #826888,1px 15px 10px #826888,1px 20px 30px #826888,1px 25px 50px #826888",
-            }}>Lancs Networks</span>
+            }}>Local Web</span>
           ) : null}
         </span>
         <MainMenu setmenu={selectmenu} />
@@ -65,7 +65,7 @@ const AntdLayout = (props: any) => {
       <Layout style={{ minHeight: '100vh' }}>
         <Header
           // theme={theme}
-          style={{ padding: 16, display: 'flex', alignItems: 'center',  background: "linear-gradient(109.6deg, rgb(44, 83, 131), rgb(44, 83, 131) 18.9%, rgb(68, 124, 143), rgb(44, 83, 131) 91.1%, rgb(44, 83, 131))" }}
+          style={{ padding: 16, display: 'flex', alignItems: 'center',  background: "linear-gradient(45deg, #07117e, #07117e" }}
         >
           <div style={{ flex: 1 }} />
           {/* <ThemeSwitch /> */}

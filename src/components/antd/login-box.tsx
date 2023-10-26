@@ -37,13 +37,14 @@ export const LoginForm = () => {
 		<>
 			<Typography.Title level={1} style={{
 				textAlign: 'center',
-				fontSize: '450%',
+				fontSize: '250%',
 				fontWeight: '600',
-				color: '#fff',
+				color: '#33CCFF',
 				backgroundClip: 'text',
 				WebkitBackgroundClip: 'text',
+				textShadow: "2px 2px 4px rgba(0, 0, 0, 0.5)",
 				// textShadow: "1px 1px 0px #8268886e,1px 2px 0px #8268886e,1px 3px 0px #957dad,1px 4px 0px #957dad,1px 5px 0px #957dad,1px 6px 0px #826888,1px 10px 5px #826888,1px 15px 10px #826888,1px 20px 30px #826888,1px 25px 50px #826888",
-			}}>LANCS NETWORKS</Typography.Title>
+			}}>LOCAL WEB</Typography.Title>
 			<Form form={form} layout="vertical" onFinish={onFinish}>
 				<Form.Item name="username" rules={[{ required: true, message: String(t("fill_username")) }]}>
 					<Input className='inputusername' placeholder={u} prefix={<UserOutlined className="site-form-item-icon" />}
@@ -66,11 +67,11 @@ export const LoginForm = () => {
 							)}
 						</Form.Item>
 					</Col>
-					<Col md={7}>
+					{/* <Col md={7}>
 						<Button className='buttonswitch' size='large' type="primary" onClick={onClick} icon={<SyncOutlined />}>
 							Switch Account
 						</Button>
-					</Col>
+					</Col> */}
 				</Row>
 			</Form>
 		</>
