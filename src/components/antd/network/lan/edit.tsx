@@ -239,7 +239,7 @@ export const LanEdit = (props: any) => {
                                     ) : null}
                         </Form.Item>
                     </Card>
-                    <Card title={t('ipv6_configure')} loading={loading} headStyle={{ background: "#eeeeee", }} >
+                    {/* <Card title={t('ipv6_configure')} loading={loading} headStyle={{ background: "#eeeeee", }} >
                         <Form.Item label={t('protocol')} name="protov6"
                         >
                             <Select
@@ -260,8 +260,8 @@ export const LanEdit = (props: any) => {
 
                                 ]}
                             ></Select>
-                        </Form.Item>
-                        <Form.Item
+                        </Form.Item> */}
+                        {/* <Form.Item
                             noStyle
                             shouldUpdate={(prevValues, currentValues) => prevValues.gender !== currentValues.gender}
                         >
@@ -279,9 +279,9 @@ export const LanEdit = (props: any) => {
                         style={{ height: "auto", maxWidth: "200%", width: "768px" }}
                         >
                             <Switch></Switch>
-                        </Form.Item>
+                        </Form.Item> */}
 
-                    </Card>
+                    {/* </Card> */}
                     <Form.Item
                         wrapperCol={{ offset: 12, span: 16 }}
                     >

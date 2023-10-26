@@ -14,10 +14,10 @@ const Page = () => {
     }, 2000);
   return (
     <Card>
-      <Card title={t("Global_Configuration")} type="inner" headStyle={{ background:"linear-gradient(109.6deg, rgb(44, 83, 131), rgb(44, 83, 131) 18.9%, rgb(68, 124, 143), rgb(44, 83, 131) 91.1%, rgb(44, 83, 131))", color: 'white' }}>
+      <Card title={t("Global_Configuration")} type="inner" headStyle={{ background:"linear-gradient(45deg, #07117e, #07117e", color: 'white' }}>
         <MeshTable />
       </Card>
-      <Card loading={loading} title={t("Mesh_Topo_Information")} type="inner" headStyle={{background:"linear-gradient(109.6deg, rgb(44, 83, 131), rgb(44, 83, 131) 18.9%, rgb(68, 124, 143), rgb(44, 83, 131) 91.1%, rgb(44, 83, 131))", color: 'white' }}>
+      <Card loading={loading} title={t("Mesh_Topo_Information")} type="inner" headStyle={{background:"linear-gradient(45deg, #07117e, #07117e", color: 'white' }}>
         <div style={{ overflowX: 'auto' }}>
           <MeshTopo />
         </div>
