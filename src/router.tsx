@@ -1,14 +1,14 @@
 import { createBrowserRouter, Router } from 'react-router-dom'
 import PageLogin from 'pages/login'
 import StatusOverviewPage from 'pages/status/overview'
-import NetworkInterfacesPage from 'pages/network/multicast'
-import NetworkVlan from 'pages/network/vlan'
+// import NetworkInterfacesPage from 'pages/network/multicast'
+// import NetworkVlan from 'pages/network/vlan'
 import NetworkLan from 'pages/network/lan'
 import NetworkMesh from 'pages/network/mesh/mesh'
-import PortForward from 'pages/security/port-forward'
-import Ipfilter from 'pages/security/ipfilter'
-import URLfilter from 'pages/security/URLfilter/URLfilterindex'
-import ResgisLinksafe from 'pages/linksafe/resgistration'
+// import PortForward from 'pages/security/port-forward'
+// import Ipfilter from 'pages/security/ipfilter'
+// import URLfilter from 'pages/security/URLfilter/URLfilterindex'
+// import ResgisLinksafe from 'pages/linksafe/resgistration'
 import UlSystem from 'pages/system/ulfirmware'
 import FactorySystem from 'pages/system/rsfactory'
 import PingSystem from 'pages/system/ping'
@@ -18,8 +18,8 @@ import RebootSystem from 'pages/system/reboot'
 import ShutdownSystem from 'pages/system/shutdown'
 import WirelessInterfacesPage from 'pages/network/wireless/basicwifi'
 import WanSettingPage from 'pages/internet/wan/wan'
-import DdnsSettingPage from 'pages/internet/ddns/ddns'
-import OpenVpnInternet from 'pages/internet/openvpn'
+// import DdnsSettingPage from 'pages/internet/ddns/ddns'
+// import OpenVpnInternet from 'pages/internet/openvpn'
 import RootPage from 'pages/rootpage'
 
 
@@ -42,14 +42,14 @@ export default createBrowserRouter([
   {
     path: 'network',
     children: [
-      {
-        path: 'igmp',
-        element: <NetworkInterfacesPage />
-      },
-      {
-        path: 'vlan',
-        element: <NetworkVlan />
-      },
+      // {
+      //   path: 'igmp',
+      //   // element: <NetworkInterfacesPage />
+      // },
+      // {
+      //   path: 'vlan',
+      //   element: <NetworkVlan />
+      // },
 
       {
         path: 'lan',
@@ -72,48 +72,48 @@ export default createBrowserRouter([
         path: 'wan',
         element: <WanSettingPage />,
       },
-      {
-        path: 'ddns',
-        element: <DdnsSettingPage />,
-      },
-      {
-        path: 'openvpn',
-        element: <OpenVpnInternet />,
-      },
+      // {
+      //   path: 'ddns',
+      //   element: <DdnsSettingPage />,
+      // },
+      // {
+      //   path: 'openvpn',
+      //   element: <OpenVpnInternet />,
+      // },
       {
         path: 'routing',
         element: <StaticRoutes />,
       },
     ],
   },
-  {
-    path: 'security',
-    children: [
-      {
-        path: 'portforward',
-        element: <PortForward />,
-      },
-      {
-        path: 'ipfilter',
-        element: <Ipfilter />,
-      },
-      {
-        path: 'urlfilter',
-        element: <URLfilter />,
-      },
+  // {
+  //   path: 'security',
+  //   children: [
+  //     {
+  //       path: 'portforward',
+  //       element: <PortForward />,
+  //     },
+  //     {
+  //       path: 'ipfilter',
+  //       element: <Ipfilter />,
+  //     },
+  //     {
+  //       path: 'urlfilter',
+  //       element: <URLfilter />,
+  //     },
 
-    ],
-  },
-  {
-    path: 'linksafe',
-    children: [
-      {
-        path: 'register',
-        element: <ResgisLinksafe />,
-      },
+  //   ],
+  // },
+  // {
+  //   path: 'linksafe',
+  //   children: [
+  //     {
+  //       path: 'register',
+  //       element: <ResgisLinksafe />,
+  //     },
 
-    ],
-  },
+  //   ],
+  // },
   {
     path: 'system',
     children: [
