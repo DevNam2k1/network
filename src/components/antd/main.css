@@ -2,11 +2,9 @@
     height: 45px;
     width: 50%;
     border-radius: 10px;
+    border: 2px solid rgb(163, 158, 158);
     justify-content: center;
     margin-left: 185px;
-    /* margin: 0 auto; 
-    display: block;Đảm bảo rằng ô nhập là một khối (block element) */
-    /* text-align: center; */
     
 }
 
@@ -16,6 +14,7 @@
     height: 45px;
     width: 50%;
     border-radius: 10px;
+    border: 2px solid rgb(163, 158, 158);
     justify-content: center;
 }
 
