@@ -30,7 +30,7 @@ const AntdLayoutMenu = (props:any) => {
             style={{ fontSize: 32, color: '#1890ff', margin: 16 }}
           />
           {!sideBarCollapsed ? (
-            <span style={{ color: '#fff', fontSize: 18 }}>Lancs Network</span>
+            <span style={{ color: '#fff', fontSize: 18 }}>Local Web</span>
           ) : null}
         </span>
         <MainMenu />
@@ -45,7 +45,7 @@ const AntdLayoutMenu = (props:any) => {
         </Header>
         <Content style={{ padding: 16, minHeight: '100vh' }}>{children}</Content>
         <Footer style={{ textAlign: 'center' }}>
-          &copy; 2022&nbsp;<strong>Lancs Network</strong>
+          {/* &copy; 2022&nbsp;<strong>Lancs Network</strong> */}
         </Footer>
       </Layout>
     </Layout>

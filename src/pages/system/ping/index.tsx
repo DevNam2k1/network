@@ -11,7 +11,7 @@ const Page = () => {
             <Row>
             <Col span={4}></Col>
             <Col span={16}>
-            <Card title="Ping" type="inner" headStyle={{background:"linear-gradient(109.6deg, rgb(44, 83, 131), rgb(44, 83, 131) 18.9%, rgb(68, 124, 143), rgb(44, 83, 131) 91.1%, rgb(44, 83, 131))",color: 'white'}}>
+            <Card title="Ping" type="inner" headStyle={{background:"linear-gradient(45deg, #07117e, #07117e",color: 'white'}}>
                 <br></br>
                 <div style={{ overflowX: 'auto' }}>
                 <PingSystem />

@@ -13,8 +13,9 @@ export const ClientsConnected = (props:any) => {
     interface DataType {
     mac: string;
     freq: string;
-    tx: number;
-    rx: number;
+    total: string;
+    tx: string;
+    rx: string;
     signal: number;
     }
 
@@ -25,11 +26,11 @@ export const ClientsConnected = (props:any) => {
         key: 'mac',
         render: (text) => <a>{text}</a>,
     },
-    {
-        title: t('frequency'),
-        dataIndex: 'freq',
-        key: 'freq',
-    },
+    // {
+    //     title: t('frequency'),
+    //     dataIndex: 'freq',
+    //     key: 'freq',
+    // },
     {
         title: t('tx_bytes'),
         dataIndex: 'tx',
@@ -39,6 +40,11 @@ export const ClientsConnected = (props:any) => {
         title: t('rx_bytes'),
         dataIndex: 'rx',
         key: 'rx',
+    },
+    {
+        title: t('total'),
+        dataIndex: 'total',
+        key: 'total',
     },
     {
         title: t('signal'),
@@ -51,7 +57,7 @@ export const ClientsConnected = (props:any) => {
 
     const { systemInfo } = useSelector(sessionSelector)
     const { wlan0_clients = {}, wlan1_clients = {} } = systemInfo?.data || {}  
-    const  clients_24 = wlan0_clients.clients  
+    let  clients_24 = wlan0_clients.clients 
     const  clients_5 = wlan1_clients.clients 
     const freq24 = wlan0_clients.freq
     const freq5 = wlan1_clients.freq
@@ -60,12 +66,16 @@ export const ClientsConnected = (props:any) => {
     for (var client in clients_24) {
         // skip loop if the property is from prototype
         if (!clients_24.hasOwnProperty(client)) continue;
+        const totalValue = (clients_24[client].bytes?.tx + clients_24[client].bytes?.rx || 0) / 1000000;
+        const txValue = (clients_24[client].bytes?.tx || 0) / 1000000;
+        const rxValue = (clients_24[client].bytes?.rx || 0) / 1000000;
 
         data.push({
                 mac: client,
                 freq: freq24,
-                tx: clients_24[client].bytes?.tx || 0,
-                rx: clients_24[client].bytes?.rx || 0, 
+                total: totalValue.toFixed(2) + " Mb",
+                tx: txValue.toFixed(2) + " Mb",
+                rx: rxValue.toFixed(2) + " Mb",
                 signal: clients_24[client]?.signal || 0
             })
     }
@@ -73,12 +83,16 @@ export const ClientsConnected = (props:any) => {
     for (var client in clients_5) {
         // skip loop if the property is from prototype
         if (!clients_5.hasOwnProperty(client)) continue;
+        const totalValue = (clients_5[client].bytes?.tx + clients_5[client].bytes?.rx || 0) / 1000000;
+        const txValue = (clients_5[client].bytes?.tx || 0) / 1000000;
+        const rxValue = (clients_5[client].bytes?.rx || 0) / 1000000;
 
         data.push({
                 mac: client,
                 freq: freq5,
-                tx: clients_5[client].bytes?.tx || 0,
-                rx: clients_5[client].bytes?.rx || 0,
+                total: totalValue.toFixed(2) + " Mb",
+                tx: txValue.toFixed(2) + " Mb",
+                rx: rxValue.toFixed(2) + " Mb",
                 signal: clients_5[client]?.signal || 0
             })
     }
@@ -99,7 +113,7 @@ export const NetworkStatistic = (props:any) => {
         for (let i = 0; i < 120; i++) {
             data.push({
                 value: rx_bytes[i]/1000,
-                category: 'rx (KB/s)',
+                category: 'Receive (KB/s)',
                 time: i,
             });
         }
@@ -107,7 +121,7 @@ export const NetworkStatistic = (props:any) => {
         for (let i = 0; i < 120; i++) {
             data.push({
                 value: tx_bytes[i]/1000,
-                category: 'tx (KB/s)',
+                category: 'Transmit (KB/s)',
                 time: i,
             });
         }
@@ -122,7 +136,7 @@ export const NetworkStatistic = (props:any) => {
         for (let i = 0; i < 120; i++) {
             data.push({
                 value: (rx_bytes_lan1[i] + rx_bytes_lan2[i])/1000,
-                category: 'rx (KB/s)',
+                category: 'Receive (KB/s)',
                 time: i,
             });
         }
@@ -130,7 +144,7 @@ export const NetworkStatistic = (props:any) => {
         for (let i = 0; i < 120; i++) {
             data.push({
                 value: (tx_bytes_lan1[i] + tx_bytes_lan2[i])/1000,
-                category: 'tx (KB/s)',
+                category: 'Transmit (KB/s)',
                 time: i,
             });
         }
@@ -145,7 +159,7 @@ export const NetworkStatistic = (props:any) => {
         for (let i = 0; i < 120; i++) {
             data.push({
                 value: (rx_bytes_wlan1[i] + rx_bytes_wlan0[i])/1000 > 0 ? (rx_bytes_wlan1[i] + rx_bytes_wlan0[i])/1000 : -(rx_bytes_wlan1[i] + rx_bytes_wlan0[i])/1000,
-                category: 'rx (KB/s)',
+                category: 'Receive (KB/s)',
                 time: i,
             });
         }
@@ -153,7 +167,7 @@ export const NetworkStatistic = (props:any) => {
         for (let i = 0; i < 120; i++) {
             data.push({
                 value: (tx_bytes_wlan1[i] + tx_bytes_wlan0[i])/1000 > 0 ? (tx_bytes_wlan1[i] + tx_bytes_wlan0[i])/1000 : - (tx_bytes_wlan1[i] + tx_bytes_wlan0[i])/1000,
-                category: 'tx (KB/s)',
+                category: 'Transmit (KB/s)',
                 time: i,
             });
         }
@@ -164,7 +178,7 @@ export const NetworkStatistic = (props:any) => {
         xField: 'time',
         yField: 'value',
         seriesField: 'category',
-        color: ['#FF0000', '#FF0000', '#FF0000'],
+        color: ['#0000FF', '#FF0000', '#FF0000'],
         };
 
     return <Line {...config} />;

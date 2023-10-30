@@ -70,7 +70,7 @@ const Page = () => {
         <div>
             <Row gutter={[24, 10]}>
                 <Col span={12}>
-                <Card title={t('config_lan_setting')} type='inner' hoverable headStyle={{background:"linear-gradient(109.6deg, rgb(44, 83, 131), rgb(44, 83, 131) 18.9%, rgb(68, 124, 143), rgb(44, 83, 131) 91.1%, rgb(44, 83, 131))",color: 'white'}}>
+                <Card title={t('config_lan_setting')} type='inner' hoverable headStyle={{background:"linear-gradient(45deg, #07117e, #07117e",color: 'white'}}>
                     <div style={{ overflowX: 'auto' }}>
                     <LanEdit item={item}
                         onDone={onDone} value={value} handleChange={handleChange} />
@@ -79,7 +79,7 @@ const Page = () => {
                 </Col>
                 <br></br>
                 <Col span={12}>
-                    <Card title={t('allocated')} type='inner' headStyle={{background:"linear-gradient(109.6deg, rgb(44, 83, 131), rgb(44, 83, 131) 18.9%, rgb(68, 124, 143), rgb(44, 83, 131) 91.1%, rgb(44, 83, 131))",color: 'white'}}>
+                    <Card title={t('allocated')} type='inner' headStyle={{background:"linear-gradient(45deg, #07117e, #07117e",color: 'white'}}>
                         <div style={{ overflowX: 'auto' }}>   
                         <LanTable
                             data1={dhcpdata}

@@ -81,7 +81,7 @@ const Page = () => {
                     display: 'flex',
                 }}
             >
-            <Card title={t('route_list')} headStyle={{background:"linear-gradient(109.6deg, rgb(44, 83, 131), rgb(44, 83, 131) 18.9%, rgb(68, 124, 143), rgb(44, 83, 131) 91.1%, rgb(44, 83, 131))",color: 'white'}}>
+            {/* <Card title={t('route_list')} headStyle={{background:"linear-gradient(109.6deg, rgb(44, 83, 131), rgb(44, 83, 131) 18.9%, rgb(68, 124, 143), rgb(44, 83, 131) 91.1%, rgb(44, 83, 131))",color: 'white'}}>
                 <div style={{ overflowX: 'auto' }}>
                     <Router2Table
                         haha={data2}
@@ -92,8 +92,8 @@ const Page = () => {
             <Button type="primary" onClick={onCreateItem} >
                 {t('create')}
             </Button>
-            </Card>
-            <Card title={t('route_list_IPv4')} headStyle={{background:"linear-gradient(109.6deg, rgb(44, 83, 131), rgb(44, 83, 131) 18.9%, rgb(68, 124, 143), rgb(44, 83, 131) 91.1%, rgb(44, 83, 131))",color: 'white'}}>
+            </Card> */}
+            <Card title={t('route_list_IPv4')} headStyle={{background:"linear-gradient(45deg, #07117e, #07117e",color: 'white'}}>
                 <div style={{ overflowX: 'auto' }}>
                     <RouterTable
                         hihi={data}

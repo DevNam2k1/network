@@ -55,20 +55,20 @@ export const WanSettings = (props: any) => {
         },
     ]).current;
 
-    const optionProtoWanv6 = useRef([
-        {
-            value: "none",
-            label: t('none'),
-        },
-        {
-            value: "dhcpv6",
-            label: "DHCP",
-        },
-        {
-            value: "static",
-            label: "Static",
-        },
-    ]).current;
+    // const optionProtoWanv6 = useRef([
+    //     {
+    //         value: "none",
+    //         label: t('none'),
+    //     },
+    //     {
+    //         value: "dhcpv6",
+    //         label: "DHCP",
+    //     },
+    //     {
+    //         value: "static",
+    //         label: "Static",
+    //     },
+    // ]).current;
 
     const refreshData = async () => {
         const result = await ubusApi.show_network_wan_congfig()
@@ -345,7 +345,7 @@ export const WanSettings = (props: any) => {
                     </Form.Item>
 
                 </Card>
-                <Card title="IPV6" loading={loading}>
+                {/* <Card title="IPV6" loading={loading}>
                     <Form.Item name="protov6"
                         label={t('protocol')}
                     >
@@ -376,11 +376,12 @@ export const WanSettings = (props: any) => {
                                     </>
                                 ) : null}
                     </Form.Item>
-                </Card>
+                </Card> */}
                 <Form.Item wrapperCol={{ offset: 12, span: 16 }}>
                     <Button
                         type='primary'
                         htmlType="submit"
+                        style={{ backgroundColor: '#0033FF', color: 'white' }}
                     >
                         {t('submit')}
                     </Button>

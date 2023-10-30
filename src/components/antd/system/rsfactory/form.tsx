@@ -47,7 +47,7 @@ export const FactorySystem = (props: any) => {
         )
     }
     return (
-        <Card title={t("factory_default")} type="inner" headStyle={{  background: "linear-gradient(109.6deg, rgb(44, 83, 131), rgb(44, 83, 131) 18.9%, rgb(68, 124, 143), rgb(44, 83, 131) 91.1%, rgb(44, 83, 131))", color: 'white' }}>
+        <Card title={t("factory_default")} type="inner" headStyle={{  background: "linear-gradient(45deg, #07117e, #07117e", color: 'white' }}>
             <Space
                 direction="vertical"
                 size="middle"

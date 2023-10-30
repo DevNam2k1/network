@@ -53,7 +53,7 @@ export const Dashboard = (props: any) => {
         </Col>
 
         <Col md={16}>
-          <Card title={t("wireless_clients")} headStyle={{background:"linear-gradient(109.6deg, rgb(44, 83, 131), rgb(44, 83, 131) 18.9%, rgb(68, 124, 143), rgb(44, 83, 131) 91.1%, rgb(44, 83, 131))",color: 'white'}} bodyStyle={{height: "398px"}}>
+          <Card title={t("wireless_clients")} headStyle={{background:"linear-gradient(45deg, #07117e, #07117e",color: 'white'}} bodyStyle={{height: "398px"}}>
             <div style={{ overflowX: 'auto' }}>
               <ClientsConnected></ClientsConnected>
             </div>
@@ -63,19 +63,19 @@ export const Dashboard = (props: any) => {
       <br></br>
       <Row gutter={[24, 10]}>
         <Col span={24} md={8}>
-          <Card title={t("wan_statistic")} headStyle={{background:"linear-gradient(109.6deg, rgb(44, 83, 131), rgb(44, 83, 131) 18.9%, rgb(68, 124, 143), rgb(44, 83, 131) 91.1%, rgb(44, 83, 131))",color: 'white'}} >
+          <Card title={t("wan_statistic")} headStyle={{background:"linear-gradient(45deg, #07117e, #07117e",color: 'white'}} >
             <NetworkStatistic name="wan"></NetworkStatistic>
           </Card>
         </Col>
 
         <Col md={8}>
-          <Card title={t("lan_statistic")} headStyle={{background:"linear-gradient(109.6deg, rgb(44, 83, 131), rgb(44, 83, 131) 18.9%, rgb(68, 124, 143), rgb(44, 83, 131) 91.1%, rgb(44, 83, 131))",color: 'white'}}>
+          <Card title={t("lan_statistic")} headStyle={{background:"linear-gradient(45deg, #07117e, #07117e",color: 'white'}}>
             <NetworkStatistic name="lan"></NetworkStatistic>
           </Card>
         </Col>
 
         <Col md={8}>
-          <Card title={t("wifi_statistic")} headStyle={{background:"linear-gradient(109.6deg, rgb(44, 83, 131), rgb(44, 83, 131) 18.9%, rgb(68, 124, 143), rgb(44, 83, 131) 91.1%, rgb(44, 83, 131))",color: 'white'}}>
+          <Card title={t("wifi_statistic")} headStyle={{background:"linear-gradient(45deg, #07117e, #07117e",color: 'white'}}>
             <NetworkStatistic name="wifi" ></NetworkStatistic>
           </Card>
         </Col>

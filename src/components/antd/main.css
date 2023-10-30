@@ -1,16 +1,20 @@
 .inputusername {
     height: 45px;
-    width: 100%;
+    width: 50%;
     border-radius: 10px;
+    border: 2px solid rgb(163, 158, 158);
     justify-content: center;
+    margin-left: 185px;
     
 }
 
 .inputpassword {
     margin-top: -15px;
+    margin-left: 185px;
     height: 45px;
-    width: 100%;
+    width: 50%;
     border-radius: 10px;
+    border: 2px solid rgb(163, 158, 158);
     justify-content: center;
 }
 
@@ -24,8 +28,9 @@
 .buttonlogin{
     border: none;
     color: #fff;
-    width: auto;
+    width: 71%;
     border-radius: 10px;
+    margin-left: 185px;
 }
 
 .buttonswitch{
